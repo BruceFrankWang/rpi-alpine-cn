@@ -6,5 +6,7 @@ FROM arm32v6/alpine:3.7
 
 LABEL maintainer="Bruce Frank Wang <bruce.frank.wang@gmail.com>"
 
+RUN ls /etc
+RUN ls /etc/apk
 RUN cp /etc/apk/repositories /etc/apk/repositories.official
 RUN sed -i "s/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g" /etc/apk/repositories
